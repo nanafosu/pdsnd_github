@@ -6,6 +6,10 @@ Completed project and created README file.
 
 ### Computing descriptive statistics 
 User chooses the city and criteria for which he would want data to be filtered
+**Computation Steps**
+* Select city to be analysed
+* Select filtering criteria
+* Select Month and/or Day of week
 
 ### Files used
 * chicago.csv
