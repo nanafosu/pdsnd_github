@@ -2,10 +2,10 @@
 Completed project and created README file.
 
 ### Explore US Bikeshare Data
-Interactive data analysis
+Computing descriptive statistics
 
-### Description
-Describe what your project is about and what it does
+### Interactive Data Analysis
+User chooses the city and criteria for which he would want data to be filtered
 
 ### Files used
 Include the files used
