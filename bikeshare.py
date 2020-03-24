@@ -15,14 +15,14 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington)
+# TO DO: get user input for city (chicago, new york city, washington)
     print("Would you like to see data from:")
     print("1. Chicago")
     print("2. New York City")
     print("3. Washington")
     while True:
         try:
-            selection=int(input("Enter number to choose a city:\n"))
+            selection=int(input("Enter a number to choose a city:\n"))
             if selection==1:
                 city='chicago'
                 break
@@ -38,11 +38,11 @@ def get_filters():
         except ValueError:
             print("Invalid Option. Enter 1-3")
     options = ["both", "month", "day"]
-# Print out your options
+# TO DO: Print out the options
     for i in range(len(options)):
         print(str(i+1) + ":", options[i])
 
-# Take user input for filtering type from the list
+# TO DO: Take user input for filtering type from the list
     inp = int(input("Would you like to filter by month, day or both. Enter a number:\n "))
     if inp in range(1, 4):
         if inp==1:
@@ -59,7 +59,7 @@ def get_filters():
                 try:
                     day=int(input("Which day? Please enter day as integer (eg. 1=Monday)\n"))
                     if day not in week_days:
-                        print("Please enter integer in 1-7:\n")
+                        print("Please enter an integer from 1-7:\n")
                         continue
                     else:
                         break

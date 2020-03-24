@@ -14,14 +14,15 @@ User chooses the city and criteria for which he would want data to be filtered:
 * Select to view individual data or restart analysis
 
 ### Files used
+* bikeshare.py
 * chicago.csv
 * new_york_city.csv
 * washington.csv
 
 ### Credits
 *Author*: Kwadwo Fosu Appiah
-www.stackoverflow.com
-udacity.com
+https://www.udacity.com
+https://www.stackoverflow.com
 https://stackoverflow.com
 https://youtube.com
 https://docs.python.org
