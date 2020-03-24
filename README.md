@@ -1,8 +1,8 @@
-### Date created
-Include the date you created this project and README file.
+### March 24, 2020
+Completed project and created README file.
 
-### Project Title
-Replace the Project Title
+### Explore US Bikeshare Data
+Interactive data analysis
 
 ### Description
 Describe what your project is about and what it does
