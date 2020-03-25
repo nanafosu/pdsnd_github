@@ -6,7 +6,8 @@ Completed project and created README file.
 
 ### Computing descriptive statistics
 The computation is done by running the python script.
-User chooses the city and criteria for which he would want data to be filtered:
+User chooses the city and criteria for which he would want data to be filtered
+
 **Computation Steps**
 * Select city to be analysed
 * Select filtering criteria

@@ -42,7 +42,7 @@ def get_filters():
             print("Invalid Option. Enter 1-3")
     options = ["both", "month", "day"]
 
-# TO DO: Print out the options
+# TO DO: Print out the filtering options
     for i in range(len(options)):
         print(str(i+1) + ":", options[i])
 
@@ -62,14 +62,14 @@ def get_filters():
             week_days=[1,2,3,4,5,6,7]
             while True:
                 try:
-                    day=int(input("Which day? Please enter day as integer (eg. 1=Monday)\n"))
+                    day=int(input("Which day? Please enter day as integer (eg. 1=Sunday)\n"))
                     if day not in week_days:
                         print("Please enter an integer from 1-7:\n")
                         continue
                     else:
                         break
                 except ValueError:
-                    print("Not an integer! Try again.")
+                    print("Not an integer! Please enter day as integer (eg. 1=Sunday).")
                     continue
 
 # TO DO: get user input for month (all, january, february, ... , june)
