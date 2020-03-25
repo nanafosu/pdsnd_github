@@ -18,7 +18,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
 
-# TO DO: get user input for city (chicago, new york city, washington)
+    # TO DO: get user input for city (chicago, new york city, washington)
     print("Would you like to see data from:")
     print("1. Chicago")
     print("2. New York City")
@@ -42,11 +42,11 @@ def get_filters():
             print("Invalid Option. Enter 1-3")
     options = ["both", "month", "day"]
 
-# TO DO: Print out the filtering options
+    # TO DO: Print out the filtering options
     for i in range(len(options)):
         print(str(i+1) + ":", options[i])
 
-# TO DO: Take user input for filtering type from the list
+    # TO DO: Take user input for filtering type from the list
     inp = int(input("Would you like to filter by month, day or both. Enter a number:\n "))
     if inp in range(1, 4):
         if inp==1:
@@ -58,7 +58,7 @@ def get_filters():
                 else:
                     break
 
-# TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+            # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
             week_days=[1,2,3,4,5,6,7]
             while True:
                 try:
@@ -72,7 +72,7 @@ def get_filters():
                     print("Not an integer! Please enter day as integer (eg. 1=Sunday).")
                     continue
 
-# TO DO: get user input for month (all, january, february, ... , june)
+        # TO DO: get user input for month (all, january, february, ... , june)
         elif inp==2:
             months = ['january', 'february', 'march', 'april', 'may', 'june']
             while True:
@@ -83,7 +83,7 @@ def get_filters():
                     break
             day='all'
 
-# TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+        # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
         elif inp==3:
             week_days=[1,2,3,4,5,6,7]
             while True:
@@ -151,11 +151,11 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-# TO DO: display the most common month
+    # TO DO: display the most common month
     most_common_month = df['month'].mode()[0]
     print("Most common month", most_common_month)
 
-# TO DO: display the most common day of week
+    # TO DO: display the most common day of week
     most_common_weekday=df['day_of_week'].mode()[0]
     print("Most common weekday:", most_common_weekday)
 
@@ -172,15 +172,15 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-# TO DO: display most commonly used start station
+    # TO DO: display most commonly used start station
     most_common_starttime=df['Start Time'].mode()[0]
     print("Most common Start Time:", most_common_starttime)
 
-# TO DO: display most commonly used end station
+    # TO DO: display most commonly used end station
     most_common_endtime=df['End Time'].mode()[0]
     print("Most common End Time:", most_common_endtime)
 
-# TO DO: display most frequent combination of start station and end station trip
+    # TO DO: display most frequent combination of start station and end station trip
     freq_startendtrip_combination = df[['Start Station','End Station']].mode().loc[0]
     print("Most frequent combination of start station and end station trip:", freq_startendtrip_combination)
    
@@ -194,11 +194,11 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-# TO DO: display total travel time
+    # TO DO: display total travel time
     total_travel=sum(df['Trip Duration'])
     print("Total travel time:", total_travel)
 
-# TO DO: display mean travel time
+    # TO DO: display mean travel time
     mean_travel=df['Trip Duration'].mean()
     print("Mean travel time:", mean_travel)
 
@@ -233,6 +233,14 @@ def user_stats(df,city):
     
   
 def display_raw_data(df):
+    """
+    Display five rows of individual data and User gets option to re-display or exit
+
+    Args:
+        (DataFrame) df - generated table after filtering
+    Returns:
+        rand_data - displays five rows of individual data
+    """
     choice_yes=['yes','y','Yes', 'YES','Y']
     choice_no=['no','No','NO','n','N']
 
@@ -240,15 +248,15 @@ def display_raw_data(df):
     while True:
         view=input("Would you like to view individual data?\nyes or no:" )
         if view in choice_yes:
-            rand_data=df.sample(n=5)
-            print(rand_data.head())
+            raw_data=df.sample(n=5)
+            print(raw_data.head())
             continue
         elif view in choice_no:
             break
         else:
             print("Please answer Yes or No:\n")
         continue
-    return rand_data
+    return raw_data
     
     
 # TO DO: Call all other functions to interact with user
