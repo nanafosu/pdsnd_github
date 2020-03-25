@@ -5,6 +5,8 @@ import numpy as np
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+              
+              
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -211,12 +213,14 @@ def user_stats(df,city):
     else:
         gender_type=df['Gender'].value_counts()
         print("Counts of gender:\n", gender_type)
-# TO DO: Display earliest, most recent, and most common year of birth
+        # TO DO: Display earliest, most recent, and most common year of birth
         birth_year=max(df['Birth Year'].mode())
         print("The earliest, most recent and most common year of birth: ", birth_year)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
+    
+    
 def display_raw_data(df):
     choice_yes=['yes','y','Yes', 'YES','Y']
     choice_no=['no','No','NO','n','N']
@@ -232,7 +236,9 @@ def display_raw_data(df):
             print("Please answer Yes or No:\n")
         continue
     return rand_data
-# This is where it all happens
+    
+    
+# TO DO: Call all other functions
 def main():
     while True:
         city, month, day = get_filters()
